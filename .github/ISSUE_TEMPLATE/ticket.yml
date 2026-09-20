@@ -1,0 +1,33 @@
+name: minicc ticket
+description: A unit of work, 1 to 2 hours, with a checkable definition of done
+title: "area: short imperative title"
+labels: []
+body:
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: One sentence. What this unlocks, or what breaks without it.
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      description: Checkboxes. If you cannot write them, the ticket is not scoped yet.
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+  - type: textarea
+    id: measures
+    attributes:
+      label: Measures
+      description: Optional. Which number this moves and which column of bench/results it lands in. Leave blank if it moves none.
+  - type: input
+    id: week
+    attributes:
+      label: Week
+      description: Which weekly milestone this belongs to, or "unplanned".
