@@ -1,0 +1,11 @@
+build/
+__pycache__/
+*.o
+
+package-lock.json
+package.json
+.package-lock.json
+node_modules/
+commitlint.config.mjs
+.vscode/settings.json
+.husky/
