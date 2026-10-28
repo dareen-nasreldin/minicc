@@ -16,3 +16,18 @@ independently by diffing every generated binary against Spike, instruction for i
 
 Status: in progress, started 2026-09-21. Twelve weekly milestones, feature freeze
 2026-12-06. This README is replaced by the generated benchmark table at the freeze.
+
+## Build and test
+
+Requires CMake and a C++ compiler. doctest is vendored under `test/third_party`, so
+there is nothing else to install.
+
+```sh
+cmake -S . -B build              # configure
+cmake --build build              # build minicc and unit_tests
+ctest --test-dir build -C Debug  # run the unit tests
+```
+
+`-C Debug` is needed with multi-config generators such as Visual Studio (the Windows
+default); without it ctest reports the test as "not available without configuration".
+On single-config generators (Ninja, Makefiles) it is harmless.
